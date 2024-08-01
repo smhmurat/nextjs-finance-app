@@ -1,13 +1,13 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import { Loader2 } from "lucide-react";
 import { ClerkLoaded, ClerkLoading } from "@clerk/nextjs";
 import Image from "next/image";
 
-interface AuthLayoutProps {
-  children: ReactNode;
-}
+type Props = {
+  children: React.ReactNode;
+};
 
-const AuthLayout: React.FC<AuthLayoutProps> = ({ children }) => {
+const AuthLayout = ({ children }: Props) => {
   return (
     <div className="min-h-screen grid grid-cols-1 lg:grid-cols-2">
       <div className="h-full lg:flex flex-col items-center justify-center px-4">
